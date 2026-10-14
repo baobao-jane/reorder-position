@@ -1,0 +1,75 @@
+{
+  "name": "reorder-position",
+  "version": "0.1.0",
+  "description": "Reorder lists by a numeric sortPosition column: fractional midpoints, multi-select moves, automatic rebalancing and minimal save payloads.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./react": {
+      "import": {
+        "types": "./dist/react.d.ts",
+        "default": "./dist/react.js"
+      },
+      "require": {
+        "types": "./dist/react.d.cts",
+        "default": "./dist/react.cjs"
+      }
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "keywords": [
+    "sort",
+    "order",
+    "reorder",
+    "fractional-indexing",
+    "position",
+    "react",
+    "hook"
+  ],
+  "scripts": {
+    "dev": "vite example",
+    "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsup && node -e \"require('fs').copyFileSync('src/styles.css','dist/styles.css')\"",
+    "test": "vitest run",
+    "typecheck": "tsc"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "jsdom": "^29.1.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.4"
+  }
+}

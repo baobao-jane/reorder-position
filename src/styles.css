@@ -1,0 +1,56 @@
+.sp-toolbar {
+  --sp-border: #e4e4e7;
+  --sp-text: #3f3f46;
+  --sp-hover: #f4f4f5;
+  --sp-accent: #18181b;
+  --sp-accent-text: #ffffff;
+  --sp-radius: 6px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sp-icon-button,
+.sp-save-button {
+  height: 32px;
+  border: 1px solid var(--sp-border);
+  border-radius: var(--sp-radius);
+  background: #ffffff;
+  color: var(--sp-text);
+  cursor: pointer;
+}
+
+.sp-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  padding: 0;
+}
+
+.sp-icon-button:hover:not(:disabled) {
+  background: var(--sp-hover);
+}
+
+.sp-divider {
+  width: 1px;
+  height: 24px;
+  margin: 0 4px;
+  background: var(--sp-border);
+}
+
+.sp-save-button {
+  padding: 0 12px;
+  border-color: var(--sp-accent);
+  background: var(--sp-accent);
+  color: var(--sp-accent-text);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sp-icon-button:disabled,
+.sp-save-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
